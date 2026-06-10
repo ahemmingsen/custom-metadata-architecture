@@ -1,0 +1,8 @@
+asset_id: "SEED-COMP-001"
+title: "Pulse Node Component"
+asset_type: "seed-component"
+lifecycle_status: "draft"
+security_classification: "public"
+taxonomies:
+  domain: "ui-architecture"
+  functional_group: "interactive-graphics"
