@@ -15,7 +15,7 @@
     },
     "asset_type": {
       "type": "string",
-      "enum": ["component", "textual-analysis", "framework-doc"]
+      "enum": ["component", "seed-component", "textual-analysis", "framework-doc"]
     },
     "lifecycle_status": {
       "type": "string",
