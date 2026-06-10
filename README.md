@@ -12,12 +12,19 @@ In addition to the core metadata engine, this repository includes a set of profe
 custom-metadata-architecture/
 │
 ├── schemas/                     # JSON Schema governance engine
+
 ├── content/                     # Markdown-based heterogeneous content layer
+
 ├── assets/                      # Raw media assets (e.g., SVGs)
+
 ├── demos/                       # UI, data, and GitHub ecosystem demos
+
 ├── docs/                        # Architecture notes & teaching materials
+
 ├── .github/workflows/           # CI validation pipeline
+
 ├── README.md                    # (this file)
+
 └── package.json                 # Validation script dependencies
 
 
