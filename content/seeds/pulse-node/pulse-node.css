@@ -1,0 +1,113 @@
+/* Base container */
+.isk-pulse-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 50% 50%, #050814 0%, #020308 100%);
+  border-radius: 999px;
+  box-shadow:
+    0 0 12px rgba(64, 224, 208, 0.4),
+    0 0 32px rgba(64, 224, 208, 0.2);
+}
+
+/* SVG sizing */
+.isk-pulse-node-svg {
+  width: 64px;
+  height: 64px;
+  overflow: visible;
+}
+
+/* Core node styling */
+.isk-pulse-node-core {
+  fill: #7fffd4;
+  stroke: #e0ffff;
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 6px rgba(127, 255, 212, 0.9));
+  transform-origin: 40px 40px;
+  animation: isk-pulse-core 2.4s ease-in-out infinite;
+}
+
+/* Outer glow animation */
+.isk-pulse-node-glow {
+  transform-origin: 40px 40px;
+  animation: isk-pulse-glow 2.4s ease-in-out infinite;
+}
+
+/* Breathing state */
+.isk-pulse-node[data-state="breathing"] .isk-pulse-node-core {
+  animation-name: isk-pulse-core, isk-pulse-core-breathe;
+}
+
+.isk-pulse-node[data-state="breathing"] .isk-pulse-node-glow {
+  animation-name: isk-pulse-glow, isk-pulse-glow-breathe;
+}
+
+/* Dormant state */
+.isk-pulse-node[data-state="dormant"] .isk-pulse-node-core {
+  animation: none;
+  opacity: 0.5;
+}
+
+.isk-pulse-node[data-state="dormant"] .isk-pulse-node-glow {
+  animation: none;
+  opacity: 0.2;
+}
+
+/* Reactive state (faster pulse) */
+.isk-pulse-node[data-state="reactive"] .isk-pulse-node-core,
+.isk-pulse-node[data-state="reactive"] .isk-pulse-node-glow {
+  animation-duration: 1.4s;
+}
+
+/* Keyframes */
+@keyframes isk-pulse-core {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  60% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes isk-pulse-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+/* Subtle breathing modulation */
+@keyframes isk-pulse-core-breathe {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 6px rgba(127, 255, 212, 0.9));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(127, 255, 212, 1));
+  }
+}
+
+@keyframes isk-pulse-glow-breathe {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
