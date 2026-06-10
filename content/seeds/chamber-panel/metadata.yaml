@@ -1,0 +1,8 @@
+asset_id: "SEED-COMP-002"
+title: "Chamber Panel Component"
+asset_type: "seed-component"
+lifecycle_status: "draft"
+security_classification: "public"
+taxonomies:
+  domain: "ui-architecture"
+  functional_group: "interactive-graphics"
