@@ -1,0 +1,79 @@
+/* Container */
+.isk-chamber-panel {
+  width: 320px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(10, 14, 28, 0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(127, 255, 212, 0.25);
+  box-shadow:
+    0 0 12px rgba(127, 255, 212, 0.25),
+    inset 0 0 18px rgba(64, 224, 208, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: isk-chamber-breathe 4.8s ease-in-out infinite;
+}
+
+/* Header */
+.isk-chamber-header {
+  margin-bottom: 12px;
+}
+
+.isk-chamber-title {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #e0ffff;
+  text-shadow: 0 0 6px rgba(127, 255, 212, 0.8);
+}
+
+/* Body */
+.isk-chamber-body {
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: #c8f7f4;
+  line-height: 1.45;
+}
+
+/* Decorative SVG overlay */
+.isk-chamber-decoration {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 120px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.isk-chamber-decoration img {
+  width: 100%;
+  height: auto;
+}
+
+/* State variations */
+.isk-chamber-panel[data-state="dormant"] {
+  opacity: 0.6;
+  animation: none;
+}
+
+.isk-chamber-panel[data-state="reactive"] {
+  animation-duration: 2.4s;
+  border-color: rgba(255, 99, 71, 0.4);
+  box-shadow:
+    0 0 18px rgba(255, 99, 71, 0.4),
+    inset 0 0 24px rgba(255, 99, 71, 0.25);
+}
+
+/* Breathing animation */
+@keyframes isk-chamber-breathe {
+  0%, 100% {
+    box-shadow:
+      0 0 12px rgba(127, 255, 212, 0.25),
+      inset 0 0 18px rgba(64, 224, 208, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(127, 255, 212, 0.45),
+      inset 0 0 28px rgba(64, 224, 208, 0.25);
+  }
+}
