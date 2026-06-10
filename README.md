@@ -9,7 +9,6 @@ By separating the Schema (the structural rules) from the Content (the unstructur
 In addition to the core metadata engine, this repository includes a set of professional system‑design demos and developer‑education artifacts that illustrate how this architecture integrates into broader engineering workflows (UI, data pipelines, GitHub ecosystem mapping, and more).
 
 ## 🧱 Repository Structure
-Code
 custom-metadata-architecture/
 │
 ├── schemas/                     # JSON Schema governance engine
@@ -27,7 +26,7 @@ custom-metadata-architecture/
 * Controlled Vocabularies: Closed enum frameworks for metadata fields such as lifecycle_status, asset_type, and security_classification.
 * Regex-Validated Identification: Strict nomenclature tracking using enterprise‑grade ID patterns (e.g., COMP-SVG-001).
 
-### 2. Heterogeneous Extensible Markdown Layer (/content)
+#### 2. Heterogeneous Extensible Markdown Layer (/content)
 * Supports two distinct data profiles under a single schema governance system:
    * Modular Technical Assets: Metadata for reusable web vector assets, CSS dependencies, and layout configurations.
 * Structured Syntheses: Textual source material, lineage classifications, translation tracking, and sense‑making notes.
