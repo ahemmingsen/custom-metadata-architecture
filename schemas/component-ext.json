@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ComponentExtension",
+  "type": "object",
+  "properties": {
+    "file_format": { "type": "string" },
+    "associated_styles": { "type": "string" }
+  }
+}
