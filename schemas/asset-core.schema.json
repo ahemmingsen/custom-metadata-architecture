@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CoreAssetMetadata",
+  "type": "object",
+  "required": ["asset_id", "title", "asset_type", "lifecycle_status", "security_classification", "taxonomies"],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "pattern": "^[A-Z]{3,4}-[A-Z]{3,4}-\\d{3}$",
+      "description": "Unique identifier matching codes like COMP-SVG-001 or TXT-SRCE-042."
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "asset_type": {
+      "type": "string",
+      "enum": ["component", "textual-analysis", "framework-doc"]
+    },
+    "lifecycle_status": {
+      "type": "string",
+      "enum": ["draft", "active-research", "production", "archived"]
+    },
+    "security_classification": {
+      "type": "string",
+      "enum": ["public", "restricted", "confidential"]
+    },
+    "taxonomies": {
+      "type": "object",
+      "required": ["domain", "functional_group"],
+      "properties": {
+        "domain": { "type": "string" },
+        "functional_group": { "type": "string" }
+      }
+    }
+  }
+}
