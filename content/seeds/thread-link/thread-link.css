@@ -1,0 +1,78 @@
+.isk-thread-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  color: #aefaf2;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  position: relative;
+  padding: 4px 2px;
+  transition: color 0.25s ease;
+}
+
+.isk-thread-link:hover {
+  color: #ffffff;
+}
+
+/* Lines */
+.isk-thread-line {
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(127, 255, 212, 0) 0%,
+    rgba(127, 255, 212, 0.8) 50%,
+    rgba(127, 255, 212, 0) 100%
+  );
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pulse animation */
+.isk-thread-link[data-state="active"] .isk-thread-line::after {
+  content: "";
+  position: absolute;
+  left: -20%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: rgba(127, 255, 212, 0.9);
+  filter: blur(2px);
+  animation: isk-thread-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes isk-thread-pulse {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+  40% {
+    left: 30%;
+    opacity: 1;
+  }
+  60% {
+    left: 70%;
+    opacity: 0.8;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+/* Dormant state */
+.isk-thread-link[data-state="dormant"] {
+  opacity: 0.5;
+}
+
+.isk-thread-link[data-state="dormant"] .isk-thread-line::after {
+  animation: none;
+}
+
+/* Reactive state */
+.isk-thread-link[data-state="reactive"] .isk-thread-line::after {
+  animation-duration: 1.4s;
+}
