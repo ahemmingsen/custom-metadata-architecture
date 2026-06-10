@@ -10,7 +10,9 @@ In addition to the core metadata engine, this repository includes a set of profe
 
 ## 🧱 Repository Structure
 custom-metadata-architecture/
+
 │
+
 ├── schemas/                     # JSON Schema governance engine
 
 ├── content/                     # Markdown-based heterogeneous content layer
