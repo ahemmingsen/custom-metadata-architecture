@@ -79,7 +79,7 @@ Clear, senior‑level explanations of:
 - schema governance principles
 
 ## 🚀 Why This Matters for Modern Content Ops & AI Ingestion
-Modern enterprise search, Knowledge Graphs, and Retrieval-Augmented Generation (RAG) AI pipelines fail when fed chaotic, unstructured information.
+This repository explores a metadata-first approach to organizing heterogeneous content. The same governance framework can classify technical assets, textual source material, and future content types while maintaining machine-readable validation and retrieval pathways.
 
 This repository models the exact type of rigorous, machine-readable data infrastructure required to:
 - feed Large Language Models safely
