@@ -20,6 +20,7 @@ custom-metadata-architecture/
 ├── README.md                    # (this file)
 └── package.json                 # Validation script dependencies
 
+
 ### 🛠️ Core Architectural Features (Metadata Engine)
 #### 1. Unified JSON Schema Enforcer (/schemas)
 * Data Normalization: Deterministic, machine-readable validation contract (asset-core.schema.json) enforcing explicit property structures.
