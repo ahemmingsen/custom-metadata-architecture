@@ -1,0 +1,13 @@
+{
+  "name": "metadata-architecture-validator",
+  "version": "1.0.0",
+  "description": "Automated linting for structured markdown frontmatter",
+  "private": true,
+  "scripts": {
+    "validate": "node validate-metadata.js"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "js-yaml": "^4.1.0"
+  }
+}
