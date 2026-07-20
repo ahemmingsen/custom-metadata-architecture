@@ -1,3 +1,4 @@
+```
 [ PUBLIC ECOSYSTEM ]                           [ PRIVATE ECOSYSTEM ]
 ┌────────────────────────┐                     ┌──────────────────────────┐
 │  Content Contributors  │                     │ Moon Cake Walk Backend   │
@@ -18,6 +19,7 @@
 │   Ingestion Adapter    ├──────────────────────────────────┘
 │  (Data Pipeline Demo)  │       Transforms & Relays Clean 
 └────────────────────────┘       Canonical Metadata
+```
 ---
 This metadata architecture is intentionally designed as an open, decoupled structural governance layer. It evaluates whether incoming content conforms to the rigorous data types, required ID formats, and schema relations necessary for a clean enterprise knowledge graph.
 To remain completely system-agnostic and scalable, semantic compliance auditing (brand voice enforcement, corporate jargon linters, proprietary vocabulary checks, or contextual processing) is decoupled entirely from this validation layer.
